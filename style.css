@@ -1340,12 +1340,37 @@ footer {
 	.collections-grid {
 		grid-template-columns: 1fr 1fr;
 	}
-	.collection-card:first-child {
+	.collection-card:first-child,
+	.collection-card.card-wide {
 		grid-row: span 1;
+		grid-column: span 1;
 	}
-	.collection-card:first-child .card-image {
+	.collection-card:first-child .card-image,
+	.collection-card.card-wide .card-image {
 		aspect-ratio: 3/4;
 		height: auto;
+	}
+	.about-image-stack {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.about-img-main,
+	.about-img-accent {
+		position: relative;
+		width: 100%;
+		height: 300px;
+		inset: auto;
+	}
+	.about-img-accent {
+		border: none;
+	}
+	.about-badge {
+		top: 0;
+		left: auto;
+		right: 20px;
+		transform: translateY(-50%);
 	}
 }
 @media (max-width: 768px) {
